@@ -17,11 +17,11 @@ if (process.env.DATABASE_URL) {
 } else {
   // Local development environment
   const requireEnvVars = [
-    "PG_USER",
-    "PG_HOST",
-    "PG_PORT",
-    "PG_DATABASE",
-    "PG_PASSWORD",
+    "PGUSER",
+    "PGHOST",
+    "PGPORT",
+    "PGDATABASE",
+    "PGPASSWORD",
   ];
 
   requireEnvVars.forEach((varName) => {
@@ -32,11 +32,11 @@ if (process.env.DATABASE_URL) {
   });
 
   dbConfig = {
-    user: process.env.PG_USER,
-    host: process.env.PG_HOST,
-    database: process.env.PG_DATABASE,
-    password: process.env.PG_PASSWORD,
-    port: process.env.PG_PORT,
+    user: process.env.PGUSER,
+    host: process.env.PGHOST,
+    database: process.env.PGDATABASE,
+    password: process.env.PGPASSWORD,
+    port: process.env.PGPORT,
   };
 }
 
