@@ -7,7 +7,7 @@ import employeeRouter from "./routes/employee.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 const corsOptions = { origin: "*" };
 app.use(cors(corsOptions));
